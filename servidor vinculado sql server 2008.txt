@@ -1,8 +1,9 @@
-Aplica a:
+﻿Aplica a:
 SQL Server 2008.
 Es necesario:
 	- Contar con credenciales de inicio de sesión (usuario y contraseña) tanto para el servidor local como para el servidor remoto.
-	- Contar con direccionamiento correcto al servidor remoto probado, es decir, que se pueda acceder a el por nombre de host, ip, nombre de instancia o cualquier direccionamiento que utilices y te permita conectarte desde un cliente SQL, como aplicaciones .Net o el mismo Management Studio.
+	- Contar con direccionamiento correcto al servidor remoto probado, es decir, que se pueda acceder a el por nombre de host, 
+	ip, nombre de instancia o cualquier direccionamiento que utilices y te permita conectarte desde un cliente SQL, como aplicaciones .Net o el mismo Management Studio.
 
 Pasos:
 	- Para vincular un servidor SQL con otro servidor SQL desde Sql Server Management Studio, expande el nodo “Objetos de Servidor” en el “Explorador de Objetos”.
@@ -12,14 +13,18 @@ Pasos:
 	- En la opción “Tipo de Servidor” elige “Otro tipo de servidor”.
 	- Como proveedor elije “SQL Server Native Client 10.0”.
 	- En nombre de producto escribe “sql_server”
-	- En origen de datos escribe el nombre de host, instancia o ip del servidor al cual quieras conectarte (previamente deberás haber efectuada una prueba de conexión desde el mismo Management Studio, para asegurarte de que el origen de datos es correcto).
+	- En origen de datos escribe el nombre de host, instancia o ip del servidor al cual quieras conectarte (previamente deberás haber efectuada una prueba de conexión 
+	desde el mismo Management Studio, para asegurarte de que el origen de datos es correcto).
 	- Posteriormente, selecciona la página “Seguridad” del menú izquierdo.
 	- En la opción “Asignaciones entre inicios de sesión de servidor local y de servidor remoto”, haz clic en “Agregar”.
-	- Elije un inicio de sesión local. Puedes elegir “Suplantar”, para suplantar al inicio de sesión remoto o declararlos directamente en las opciones “Usuario remoto” y “Contraseña remota”.
-	- En la opción “Para un inicio de sesión no definido en la lista anterior” elige “Se establecerán usando este contexto de seguridad” y repite el usuario y contraseña remotos en las cajas de texto “Inicio de sesión remoto” y “Con la contraseña”, respectivamente.
+	- Elije un inicio de sesión local. Puedes elegir “Suplantar”, para suplantar al inicio de sesión remoto o declararlos directamente en las opciones “Usuario remoto” y 
+	“Contraseña remota”.
+	- En la opción “Para un inicio de sesión no definido en la lista anterior” elige “Se establecerán usando este contexto de seguridad” y repite el usuario y contraseña 
+	remotos en las cajas de texto “Inicio de sesión remoto” y “Con la contraseña”, respectivamente.
 	- Elije ahora del menú de la izquierda “Opciones de Servidor”.
 	- Configura a verdadero o “true” las opciones “Acceso a Datos”, “RPC”, “Salida RPC” y a falso la opción “Usar intercalación remota”.
 	- Hacer clic en “Aceptar”.
 	- El servidor vinculado deberá agregarse al listado de “Servidores vinculados”.
 	- Selecciónalo, haz clic derecho sobre él y elige del menú contextual “Probar conexión”.
-	- Si todo ha sido configurado correctamente, la conexión será exitosa y ahora podras acceder a datos del servidor vinculado desde el servidor local, especificando la sintaxis [Servidor].[Catalogo].[Esquema].[Tabla], por ejemplo: SucuarlaSrv.Erp.dbo.Ventas.
+	- Si todo ha sido configurado correctamente, la conexión será exitosa y ahora podras acceder a datos del servidor vinculado desde el servidor local, especificando la 	
+	sintaxis [Servidor].[Catalogo].[Esquema].[Tabla], por ejemplo: SucuarlaSrv.Erp.dbo.Ventas.
