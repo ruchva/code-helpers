@@ -1,0 +1,2 @@
+In SQL Server 2012, you can restore a user database from a database backup that was created by using SQL Server 2005 or a later version.
+
